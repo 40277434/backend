@@ -202,7 +202,7 @@ public class DemoController {
 		}
 	}
 
-	@GetMapping(value = "/power")
+	@GetMapping(value = "/")
 	public String power(@RequestParam(value = "x") String x, @RequestParam(value = "y") String y) {
 		try {
 			JSONObject jsonObject = new JSONObject();
