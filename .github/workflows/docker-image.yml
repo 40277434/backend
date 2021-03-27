@@ -19,5 +19,5 @@ jobs:
         docker --version
         docker login --username 40277434 --password Wzfqy1314
         docker-compose build
-        docker push 40277434/webcalc-proxy
+        docker-compose push
         docker logout
