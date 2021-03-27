@@ -2,8 +2,8 @@ version: '3.4'
 
 services:
   demo:
-    image: 40277434/webcalc-backend
-    container_name: backend_container
+    image: 40277434/webcalc-proxy
+    container_name: proxy_container
     build:
       context: .
       dockerfile: ./Dockerfile
