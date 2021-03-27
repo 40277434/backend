@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  demo:
+    image: backend_image
+    container_name: backend_container
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 80:80
