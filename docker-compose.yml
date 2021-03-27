@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   demo:
-    image: backend_image
+    image: 40277434/webcalc-backend
     container_name: backend_container
     build:
       context: .

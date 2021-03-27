@@ -18,6 +18,6 @@ jobs:
       run: |
         docker --version
         docker login --username 40277434 --password Wzfqy1314
-        docker build -t 40277434/webcalc-backend .
+        docker-compose build
         docker push 40277434/webcalc-backend
         docker logout
