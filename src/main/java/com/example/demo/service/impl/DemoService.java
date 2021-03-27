@@ -12,16 +12,18 @@ import com.example.demo.mapper.DemoMapper;
 @Service
 public class DemoService implements IDemoService {
 
-	@Autowired
-	private DemoMapper demoMapper;
+	// @Autowired
+	// private DemoMapper demoMapper;
 
 	@Override
 	public int insertJOSN(String jsonString) {
-		return demoMapper.insertJOSN(jsonString);
+		return 0;
+		// return demoMapper.insertJOSN(jsonString);
 	}
 
 	@Override
 	public List<Result> selectList() {
-		return demoMapper.selectList();
+		return null;
+		// return demoMapper.selectList();
 	}
 }

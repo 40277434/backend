@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.ibatis.annotations.Param;
+// import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -49,7 +49,7 @@ public class DemoController {
 	
 
 	@GetMapping(value = "/add")
-	public String add(@Param(value = "x") String x, @Param(value = "y") String y) {
+	public String add(@RequestParam(value = "x") String x, @RequestParam(value = "y") String y) {
 		
 		try {
 			JSONObject jsonObject = new JSONObject();
@@ -89,7 +89,7 @@ public class DemoController {
 	
 	
 	@GetMapping(value = "/minus")
-	public String minus(@Param(value = "x") String x, @Param(value = "y") String y) {
+	public String minus(@RequestParam(value = "x") String x, @RequestParam(value = "y") String y) {
 		try {
 			JSONObject jsonObject = new JSONObject();
 			if (isNumeric(x) && isNumeric(x)) {
@@ -127,7 +127,7 @@ public class DemoController {
 	}
 	
 	@GetMapping(value = "/product")
-	public String product(@Param(value = "x") String x, @Param(value = "y") String y) {
+	public String product(@RequestParam(value = "x") String x, @RequestParam(value = "y") String y) {
 		try {
 			JSONObject jsonObject = new JSONObject();
 			if (isNumeric(x) && isNumeric(x)) {
@@ -165,7 +165,7 @@ public class DemoController {
 	}
 
 	@GetMapping(value = "/divi")
-	public String divi(@Param(value = "x") String x, @Param(value = "y") String y) {
+	public String divi(@RequestParam(value = "x") String x, @RequestParam(value = "y") String y) {
 		try {
 			JSONObject jsonObject = new JSONObject();
 			if (isNumeric(x) && isNumeric(x)) {
@@ -203,7 +203,7 @@ public class DemoController {
 	}
 
 	@GetMapping(value = "/power")
-	public String power(@Param(value = "x") String x, @Param(value = "y") String y) {
+	public String power(@RequestParam(value = "x") String x, @RequestParam(value = "y") String y) {
 		try {
 			JSONObject jsonObject = new JSONObject();
 			if (isNumeric(x) && isNumeric(x)) {
@@ -241,7 +241,7 @@ public class DemoController {
 	}
 
 	@GetMapping(value = "/modulu")
-	public String modulu(@Param(value = "x") String x, @Param(value = "y") String y) {
+	public String modulu(@RequestParam(value = "x") String x, @RequestParam(value = "y") String y) {
 		try {
 			JSONObject jsonObject = new JSONObject();
 			if (isNumeric(x) && isNumeric(x)) {
