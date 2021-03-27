@@ -30,8 +30,8 @@ public class DemoController {
 		}
 		if ("add".equals(method)){
 			return add(x,y);
-		}else if ("minus".equals(method)){
-			return minus(x,y);
+		}else if ("subtract".equals(method)){
+			return subtract(x,y);
 		}else if ("product".equals(method)){
 			return product(x,y);
 		}else if ("divi".equals(method)){
@@ -42,7 +42,7 @@ public class DemoController {
 			return modulu(x,y);
 		}else {
 			jsonObject.put("error", true);
-			jsonObject.put("reason", "method[add,minus,product,divi,power,modulu]");
+			jsonObject.put("reason", "method[add,subtract,product,divi,power,modulu]");
 			return jsonObject.toJSONString();
 		}
 	}
@@ -88,8 +88,8 @@ public class DemoController {
 	}
 	
 	
-	@GetMapping(value = "/minus")
-	public String minus(@RequestParam(value = "x") String x, @RequestParam(value = "y") String y) {
+	@GetMapping(value = "/subtract")
+	public String subtract(@RequestParam(value = "x") String x, @RequestParam(value = "y") String y) {
 		try {
 			JSONObject jsonObject = new JSONObject();
 			if (isNumeric(x) && isNumeric(x)) {
