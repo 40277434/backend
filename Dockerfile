@@ -4,7 +4,9 @@ COPY . .
 RUN mvn clean
 RUN mvn package -Dmaven.test.skip=true
 
-EXPOSE 8080
 
-# FROM openjdk:11-jre
-RUN ls -l ./target
+
+FROM openjdk:11-jre
+COPY --from=BUILD_IMAGE ./target/demo-0.0.1-SNAPSHOT.jar /usr/local/lib/demo-0.0.1-SNAPSHOT.jar
+EXPOSE 80
+ENTRYPOINT [ "java","-jar", "/usr/local/lib/demo-0.0.1-SNAPSHOT.jar" ]
